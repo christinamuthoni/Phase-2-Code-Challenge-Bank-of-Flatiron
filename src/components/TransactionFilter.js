@@ -30,29 +30,30 @@ function TransactionFilter() {
 
   return (
     <div className='TransactionTable'>
-      <input
+      <input 
+      className='mt-5 border-solid border-2 border-gray-300 ...	block flex-1 bg-gray-100 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400  w-full'
         type='text'
         placeholder='Search transactions by description...'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       < NewTransaction  />
-      <table>
-        <thead>
+      <table className='mt-7 border-solid border-2 border-black w-full'>
+        <thead className='bg-blue-200'>
           <tr>
-            <th>Date</th>
-            <th>Description</th>
-            <th>Category</th>
-            <th>Amount</th>
+            <th className='border-solid border-2 border-black'>Date</th>
+            <th className='border-solid border-2 border-black'>Description</th>
+            <th className='border-solid border-2 border-black'>Category</th>
+            <th className='border-solid border-2 border-black'>Amount</th>
           </tr>
         </thead>
         <tbody>
           {filteredTransactions.map((transaction) => (
-            <tr key={transaction.id}>
-              <td>{transaction.date}</td>
-              <td>{transaction.description}</td>
-              <td>{transaction.category}</td>
-              <td>{transaction.amount}</td>
+            <tr className='border-solid border-2 border-black' key={transaction.id}>
+              <td className='border-solid border-2 border-black'>{transaction.date}</td>
+              <td className='border-solid border-2 border-black'>{transaction.description}</td>
+              <td className='border-solid border-2 border-black'>{transaction.category}</td>
+              <td className='border-solid border-2 border-black'>{transaction.amount}</td>
             </tr>
           ))}
         </tbody>
