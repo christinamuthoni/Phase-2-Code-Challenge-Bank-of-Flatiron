@@ -29,7 +29,8 @@ function NewTransaction({onAddTransaction}) {
         
 
      // persist transactions on server
-     fetch("http://localhost:3000/transactions", {
+     fetch(`https://my-json-server.typicode.com/christinamuthoni/Phase-2-Code-Challenge-Bank-of-Flatiron/transactions`, {
+      // http://localhost:3000/transactions
        method: "POST",
        headers: {
         "Content-Type": "application/json",
