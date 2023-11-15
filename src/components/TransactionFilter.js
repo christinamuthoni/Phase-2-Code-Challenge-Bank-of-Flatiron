@@ -8,7 +8,7 @@ function TransactionFilter() {
 
   useEffect(() => {
     // Fetch transactions from your API endpoint
-    fetch('http://localhost:3000/transactions')
+    fetch('https://my-json-server.typicode.com/christinamuthoni/Phase-2-Code-Challenge-Bank-of-Flatiron/transactions')
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
